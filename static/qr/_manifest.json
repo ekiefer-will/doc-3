@@ -1,32 +1,32 @@
 [
   {
     "title": "Test Page",
-    "url": "https://ekiefer-will.github.io/documentation/docs/my-cool-test",
+    "url": "https://ekiefer-will.github.io/doc-3/docs/my-cool-test",
     "file": "/qr/docs_my-cool-test.png"
   },
   {
     "title": "congratulations",
-    "url": "https://ekiefer-will.github.io/documentation/docs/tutorial-basics/congratulations",
+    "url": "https://ekiefer-will.github.io/doc-3/docs/tutorial-basics/congratulations",
     "file": "/qr/docs_tutorial-basics_congratulations.png"
   },
   {
     "title": "create-a-blog-post",
-    "url": "https://ekiefer-will.github.io/documentation/docs/tutorial-basics/create-a-blog-post",
+    "url": "https://ekiefer-will.github.io/doc-3/docs/tutorial-basics/create-a-blog-post",
     "file": "/qr/docs_tutorial-basics_create-a-blog-post.png"
   },
   {
     "title": "create-a-document",
-    "url": "https://ekiefer-will.github.io/documentation/docs/tutorial-basics/create-a-document",
+    "url": "https://ekiefer-will.github.io/doc-3/docs/tutorial-basics/create-a-document",
     "file": "/qr/docs_tutorial-basics_create-a-document.png"
   },
   {
     "title": "create-a-page",
-    "url": "https://ekiefer-will.github.io/documentation/docs/tutorial-basics/create-a-page",
+    "url": "https://ekiefer-will.github.io/doc-3/docs/tutorial-basics/create-a-page",
     "file": "/qr/docs_tutorial-basics_create-a-page.png"
   },
   {
     "title": "deploy-your-site",
-    "url": "https://ekiefer-will.github.io/documentation/docs/tutorial-basics/deploy-your-site",
+    "url": "https://ekiefer-will.github.io/doc-3/docs/tutorial-basics/deploy-your-site",
     "file": "/qr/docs_tutorial-basics_deploy-your-site.png"
   }
 ]

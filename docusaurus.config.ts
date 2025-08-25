@@ -27,12 +27,12 @@ const config: Config = {
   url: 'https://ekiefer-will.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/documentation',
+  baseUrl: '/doc-3/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'ekiefer-will', // Usually your GitHub org/user name.
-  projectName: 'documentation', // Usually your repo name.
+  projectName: 'doc-3', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -94,7 +94,7 @@ const config: Config = {
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/qr', label: 'QR Codes', position: 'left'},
         {
-          href: 'https://github.com/ekiefer-will/documentation',
+          href: 'https://github.com/ekiefer-will/doc-3',
           label: 'GitHub',
           position: 'right',
         },
@@ -120,7 +120,7 @@ const config: Config = {
           title: 'More',
           items: [
             {label: 'Blog', to: '/blog'},
-            {label: 'GitHub', href: 'https://github.com/ekiefer-will/documentation'},
+            {label: 'GitHub', href: 'https://github.com/ekiefer-will/doc-3'},
           ],
         },
       ],

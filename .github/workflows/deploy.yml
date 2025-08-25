@@ -1,0 +1,46 @@
+name: Build & Deploy (Docusaurus + Contentful)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Needed so the workflow can push to gh-pages
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-doc-3
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      # Your build/start already runs `sync:contentful`, so just pass env
+      - name: Build site (runs Contentful sync first)
+        run: npm run build
+        env:
+          # Provide these in Settings → Secrets and variables → Actions → New repository secret
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }} # optional, often 'master' or 'main'
+          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
+          CONTENTFUL_PREVIEW_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_TOKEN }}
+
+      - name: Deploy to gh-pages
+        run: npx docusaurus deploy
+        env:
+          GIT_USER: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
